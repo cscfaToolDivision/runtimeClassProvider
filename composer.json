@@ -1,0 +1,28 @@
+{
+    "name" : "cscfa_tool_division/runtime_class_provider",
+    "license" : "MIT",
+    "type" : "library",
+    "authors": [
+        {
+            "name": "Matthieu Vallance",
+            "email": "matthieu.vallance@cscfa.fr"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "CSDT\\RuntimeClassProvider\\" : "src/CSDT/RuntimeClassProvider/"
+        }
+    },
+    "require" : {
+    	"myclabs/deep-copy": "^1.5@stable"
+    },
+    "require-dev": {
+        "cscfa_tool_division/phpunit_test_helper": "dev-master",
+        "escapestudios/symfony2-coding-standard": "2.9.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
