@@ -17,6 +17,7 @@ namespace CSDT\RuntimeClassProvider\Tests\ClassDefinition\Traits;
 
 use CSDT\PhpunitTestHelper\TestCases\ObjectTestCase;
 use CSDT\RuntimeClassProvider\Tests\ClassDefinition\Traits\Misc\UseClassObject;
+use CSDT\RuntimeClassProvider\Exceptions\TypeException;
 
 /**
  * UseClassTrait test
@@ -56,7 +57,6 @@ class UseClassTraitTest extends ObjectTestCase
      *
      * This method validate the trait methods.
      *
-     * @expectedException CSDT\RuntimeClassProvider\Exceptions\TypeException
      * @return            void
      */
     public function testMethods()
@@ -122,6 +122,10 @@ class UseClassTraitTest extends ObjectTestCase
             ->mustReturn(array('std' => \stdClass::class))
             ->resolve();
 
-        $this->instance->addUse(new \stdClass());
+        $this->newObjectCall()
+            ->call('addUse')
+            ->onInstance($this->instance)
+            ->mustThrow()
+            ->resolve();
     }
 }

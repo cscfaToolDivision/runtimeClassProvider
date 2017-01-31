@@ -13,7 +13,7 @@
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-namespace CSDT\RuntimeClassProvider\Tests\ClassDefinition\Traits;
+namespace CSDT\RuntimeClassProvider\Tests\ClassDefinition;
 
 /**
  * ImplementationDefinition test
@@ -26,6 +26,6 @@ namespace CSDT\RuntimeClassProvider\Tests\ClassDefinition\Traits;
  * @license  MIT <https://opensource.org/licenses/MIT>
  * @link     http://cscfa.fr
  */
-class ImplementationDefinitionTest extends \PHPUnit_Framework_TestCase
+class ImplementDefinitionTest extends \PHPUnit_Framework_TestCase
 {
 }
