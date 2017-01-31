@@ -125,7 +125,8 @@ class UseClassTraitTest extends ObjectTestCase
         $this->newObjectCall()
             ->call('addUse')
             ->onInstance($this->instance)
-            ->mustThrow()
+            ->with(array(new \stdClass()))
+            ->mustThrow(TypeException::class)
             ->resolve();
     }
 }
